@@ -1,0 +1,6 @@
+@media (max-width:425px)
+{
+	.product-grid-4 .col-12{
+    width:50% !important;
+  }
+}
