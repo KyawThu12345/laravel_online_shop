@@ -24,63 +24,40 @@ For Backend ,
 - "laravel/framework": "^10.10" (v10.19.0)
 -  "livewire/livewire": "*"(v2.12.6)
   
-<p align="center">
-    <a href="https://laravel.com"><img alt="Laravel v10.x" src="https://img.shields.io/badge/Laravel-v10.x-FF2D20?style=for-the-badge&logo=laravel"></a>
-    <a href="https://filamentadmin.com/docs/2.x/admin/installation">
-        <img alt="FILAMENT 8.x" src="https://img.shields.io/badge/FILAMENT-2.x-EBB304?style=for-the-badge">
-    </a>
-    <a href="https://php.net"><img alt="PHP 8.2" src="https://img.shields.io/badge/PHP-8.1-777BB4?style=for-the-badge&logo=php"></a>
-</p>
-## Requirements
-
-The following tools are required in order to start the installation and run the project locally.
--   PHP 8.1
--   [Composer](https://getcomposer.org/download/)
 ## Installation
-### Using Sail
-> Make sure you have [Sail](https://laravel.com/docs/10.x/sail) installed.
+
+> Make sure you have (https://laravel.com/docs/10.x) installed.
 1. Clone this repo
     ```sh
-    git clone https://github.com/compass-mobility/uma-oshi-backend.git
+    git clone https://github.com/KyawThu12345/laravel_online_shop.git
     ```
 2. Go into the project root directory
     ```sh
-    cd uma-oshi-backend
+    cd laravel_online_shop.git
     ```
 3. Copy .env.example file to .env file
     ```sh
     cp .env.example .env
     ```
-4. Install PHP dependencies
+4. Install Composer
     ```sh
-    composer install --ignore-platform-reqs
+    composer install 
     ```
-5. Boot Sail
+
+5. Generate app key
     ```sh
-    sail up -d
+    php artisan key:generate
     ```
-6. Generate app key
+
+6. Database migration
     ```sh
-    sail php artisan key:generate
+    php artisan migrate:fresh --seed
     ```
-7. Install NPM dependencies
+### Database Seeder
     ```sh
-    sail npm install
+    php artisan db:seed --class=AdminSeeder
     ```
-8. Database migration
-    ```sh
-    sail artisan migrate:fresh --seed
-    ```
-### Including Plugins
-10. Filament Shield
-    ```sh
-    sail artisan shield:install
-    ```
-### Before you push to gitHub
-11. Run
-    ```sh
-    sail .vendor/bin/pint
-    ```
+
 
 
 
