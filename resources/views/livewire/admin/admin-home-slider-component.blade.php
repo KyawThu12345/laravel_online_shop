@@ -48,7 +48,7 @@
                                             <th>SubTitle</th>
                                             <th>Offer</th>
                                             <th>Link</th>
-                                            <th>Status</th>
+                                            <th>Category_text</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -68,7 +68,7 @@
                                             <td>{{ $slide->sub_title}}</td>
                                             <td>{{ $slide->offer }}</td>
                                             <td>{{ $slide->link }}</td>
-                                            <td>{{ $slide->status == 1 ? 'Active':'Inactive' }}</td>
+                                            <td>{{ $slide->category_text }}</td>
                                             <td>
                                                 <a href="{{ route('admin.home.slide.edit',['slide_id'=>$slide->id]) }}"
                                                     class="text-info">Edit</a>
