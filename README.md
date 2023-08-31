@@ -18,6 +18,11 @@ For Backend ,
 
 ## Project Setup Requirements for this project
 
+- "php": "^8.1"
+- "laravel/framework": "^10.10" (v10.19.0)
+-  "livewire/livewire": "*"(v2.12.6)
+  
+
 
 
 
