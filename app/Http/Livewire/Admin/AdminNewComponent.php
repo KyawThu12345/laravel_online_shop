@@ -1,16 +1,17 @@
 <?php
-
 namespace App\Http\Livewire\Admin;
 
-use App\Providers\RouteServiceProvider;
+use App\Models\User;
+use Livewire\Component;
 use Illuminate\Http\Request;
-use Illuminate\Auth\Events\Registered;
+use Illuminate\Validation\Rules;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Livewire\Component;
-use Illuminate\Validation\Rules;
-use App\Models\User;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Auth\Events\Registered;
+use App\Providers\RouteServiceProvider;
 
 class AdminNewComponent extends Component
 {
@@ -21,18 +22,17 @@ class AdminNewComponent extends Component
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
+        DB::enableQueryLog();
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'utype' => 'ADM',
         ]);
-
+        Log::info(DB::getQueryLog());
         event(new Registered($user));
-
         Auth::login($user);
-
-        return redirect()->route('admin.dashboard');
+        return redirect(RouteServiceProvider::HOME);
     }
     public function render()
     {

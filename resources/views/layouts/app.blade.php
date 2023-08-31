@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/logo/os.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
-    @livewireStyles
+    {{-- @livewireStyles --}}
 </head>
 
 <body>
@@ -106,7 +106,7 @@
                                         @if (Auth::user()->utype == 'ADM')
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
-                                            <li><a href="#">New Admin</a>
+                                            <li><a href="{{ route('admin.new.create') }}">New Admin</a>
                                             </li>
                                             <li><a href="{{ route('admin.products') }}">All Products</a></li>
                                             <li><a href="{{ route('admin.home.slider') }}">All Sliders</a></li>

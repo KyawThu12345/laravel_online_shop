@@ -11,6 +11,8 @@ use Livewire\WithPagination;
 
 class HomeComponent extends Component
 {
+    public $id;
+
     public $product;
     use WithPagination;
     public $pageSize = 12;

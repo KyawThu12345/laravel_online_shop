@@ -9,7 +9,7 @@
                                 <div class="heading_s1">
                                     <h3 class="mb-30">Create an New Admin</h3>
                                 </div>
-                                <form method="post" action="{{ route('admin.new.create') }}">
+                                <form wire:submit.prevent='createAdmin'>
                                     @csrf
                                     <div class="form-group">
                                         <input type="text" required="" name="name" placeholder="Name"

@@ -76,7 +76,7 @@ Route::middleware('auth')->group(function () {
 // Route::middleware(['auth', 'authadmin'])->post('/admin/new', [AdminNewComponent::class, 'createAdmin'])->name('admin.new.create');
 
 Route::middleware('auth', 'authadmin')->group(function () {
-    Route::post('/admin/new', [AdminNewComponent::class, 'createAdmin'])->name('admin.new.create');
+    Route::get('/admin/new', AdminNewComponent::class)->name('admin.new.create');
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/categories', AdminCategoriesComponent::class)->name('admin.catagories');
     Route::get('/admin/category/add', AdminAddCategoryComponent::class)->name('admin.category.add');
