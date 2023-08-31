@@ -7,6 +7,9 @@ Laravel Ecommerce Online Shop Website
 - [Product, Category, Slider, Coupon, Customer, Dashboard]
 - For Online Shop Ecommerce website, requirements are
 
+## Learning Laravel, Tailwin css, Bootstrap, Livewire (Laravel Framework)
+For Frontend design template , 
+                              HTML, CSS, Bootstrap, Tailwind css use.
 
 ## Learning Laravel, Tailwin css, Bootstrap, Livewire (Laravel Framework)
 For Frontend design template , 
@@ -20,15 +23,6 @@ For Backend ,
 - "php": "^8.1"
 - "laravel/framework": "^10.10" (v10.19.0)
 -  "livewire/livewire": "*"(v2.12.6)
-  
-## Installation
-
-1. Prerequisites: 
-   - List any software, libraries, or tools required.
-   
-2. Installation Steps:
-   - Command to clone: `git clone https://github.com/yourusername/yourproject.git`
-   - How to install dependencies: `npm install` or `pip install -r requirements.txt`
   
 
 
