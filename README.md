@@ -80,6 +80,7 @@ The following tools are required in order to start the installation and run the 
 11. Run
     ```sh
     sail .vendor/bin/pint
+    ```
 
 
 
