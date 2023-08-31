@@ -1,3 +1,12 @@
+<div class="page-header breadcrumb-wrap">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/" rel="nofollow">Home</a>
+            <span></span> Admin
+            <span></span> Dashboard
+        </div>
+    </div>
+</div>
 <div class="content">
     <style>
         .content {
@@ -59,8 +68,7 @@
         }
     </style>
     <div class="container">
-
-      <h1>Admin Dashboard</h1>
+        <h1>Admin Dashboard</h1>
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="icon-stat">

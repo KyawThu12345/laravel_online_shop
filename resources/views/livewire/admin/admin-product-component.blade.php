@@ -1,3 +1,12 @@
+<div class="page-header breadcrumb-wrap">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/" rel="nofollow">Home</a>
+            <span></span> Admin
+            <span></span> All Products
+        </div>
+    </div>
+</div>
 <div>
     <style>
         nav svg {

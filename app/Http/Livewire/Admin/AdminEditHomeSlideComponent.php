@@ -15,7 +15,8 @@ class AdminEditHomeSlideComponent extends Component
     public $sub_title;
     public $offer;
     public $link;
-    public $status;
+    public $category_text;
+
     public $image;
     public $slider_id;
     public $newImage;
@@ -28,7 +29,7 @@ class AdminEditHomeSlideComponent extends Component
         $this->sub_title = $slide->sub_title;
         $this->offer = $slide->offer;
         $this->link = $slide->link;
-        $this->status = $slide->status;
+        $this->category_text = $slide->category_text;
         $this->image = $slide->image;
         $this->slider_id = $slide->id;
     }
@@ -41,7 +42,7 @@ class AdminEditHomeSlideComponent extends Component
             'sub_title' => 'required',
             'offer' => 'required',
             'link' => 'required',
-            'status' => 'required'
+            'category_text' => 'required'
         ]);
 
         $slide = HomeSlider::find($this->slider_id);
@@ -49,8 +50,8 @@ class AdminEditHomeSlideComponent extends Component
         $slide->title = $this->title;
         $slide->sub_title = $this->sub_title;
         $slide->offer = $this->offer;
-        $slide->link =  $this->link;
-        $slide->status = $this->status;
+        $slide->link = $this->link;
+        $slide->category_text = $this->category_text;
         if ($this->newImage) {
             unlink('assets/imgs/slider/' . $slide->image);
             $imageName = Carbon::now()->timestamp . '.' . $this->newImage->extension();

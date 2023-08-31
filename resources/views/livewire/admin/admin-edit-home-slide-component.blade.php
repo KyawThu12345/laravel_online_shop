@@ -85,10 +85,10 @@
                                         @enderror
                                     </div>
                                     <div class="mb-3 mt-3">
-                                        <label class="form-label">Status</label>
-                                        <input type="text" class="form-control" placeholder="Enter Status"
-                                            wire:model="status" />
-                                        @error('status')
+                                        <label class="form-label">Category Text</label>
+                                        <input type="text" class="form-control" placeholder="Enter Category Text"
+                                            wire:model="category_text" />
+                                        @error('category_text')
                                         <p class="text-danger">{{ $message }}</p>
                                         @enderror
                                     </div>

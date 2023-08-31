@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -14,10 +13,10 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id')->unsigned();
-            $table->decimal('subtotal');
+            $table->decimal('subtotal')->default(0);
             $table->decimal('discount')->default(0);
-            $table->decimal('tax');
-            $table->decimal('total');
+            $table->decimal('tax')->default(0);
+            $table->decimal('total', 10, 2)->default(0.00);
             $table->string('firstname');
             $table->string('lastname');
             $table->string('mobile');

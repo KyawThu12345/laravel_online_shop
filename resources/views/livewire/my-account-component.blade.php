@@ -12,8 +12,8 @@
                                             class="fi-rs-settings-sliders mr-10"></i>Dashboard</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="orders-tab" data-bs-toggle="tab" href="#orders" role="tab"
-                                        aria-controls="orders" aria-selected="false"><i
+                                    <a class="nav-link" id="orders-tab" data-bs-toggle="tab" href="#" role="tab"
+                                        aria-controls="orders" aria-selected="false" wire:click='redirectOrders'><i
                                             class="fi-rs-shopping-bag mr-10"></i>Orders</a>
                                 </li>
                                 <li class="nav-item">
@@ -44,11 +44,12 @@
                                 aria-labelledby="dashboard-tab">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5 class="mb-0">Hello Rosie! </h5>
+                                        <h5 class="mb-0">Hello {{ Auth::user()->name }}</h5>
                                     </div>
                                     <div class="card-body">
                                         <p>From your account dashboard. you can easily check &amp; view your <a
-                                                href="#">recent orders</a>, manage your <a href="#">shipping and billing
+                                                href="#">recent orders</a>, manage your <a href="#">shipping and
+                                                billing
                                                 addresses</a> and <a href="#">edit your password and account
                                                 details.</a></p>
                                     </div>
