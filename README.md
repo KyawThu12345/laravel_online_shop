@@ -49,11 +49,7 @@ For Backend ,
     php artisan key:generate
     ```
 
-6. Database migration
-    ```sh
-    php artisan migrate:fresh --seed
-    ```
-7. Database Seeder
+6. Database Seeder
     ```sh
     php artisan db:seed --class=AdminSeeder
     php artisan db:seed --class=SliderSeeder
