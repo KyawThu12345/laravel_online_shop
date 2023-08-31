@@ -56,6 +56,7 @@ For Backend ,
 7. Database Seeder
     ```sh
     php artisan db:seed --class=AdminSeeder
+    php artisan db:seed --class=SliderSeeder
     ```
 
 
