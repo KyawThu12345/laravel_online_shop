@@ -17,8 +17,12 @@ return new class extends Migration {
             $table->string('sub_title');
             $table->string('offer');
             $table->string('link');
-            $table->string('image');
             $table->string('category_text');
+            $table->string('image');
+<<<<<<< HEAD
+            $table->string('category_text');
+=======
+>>>>>>> ed961565f998292351afdefa820d254eeee4cb9a
             $table->timestamps();
         });
     }

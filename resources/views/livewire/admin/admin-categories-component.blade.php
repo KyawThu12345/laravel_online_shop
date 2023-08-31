@@ -14,8 +14,8 @@
                 <div class="breadcrumb">
                     <a href="/" rel="nofollow">Home</a>
                     <span></span>
-                    <a href="{{ route('shop') }}">Shop</a>
-                    <span></span> Admin Categories
+                    <a href="{{ route('shop') }}">Admin</a>
+                    <span></span> Categories
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<main class="main" style="transform: none;">
+{{-- <main class="main" style="transform: none;">
     <div class="page-header breadcrumb-wrap">
         <div class="container">
             <div class="breadcrumb">
@@ -7,8 +7,8 @@
                 <span></span> Abstract Print Patchwork Dress
             </div>
         </div>
-    </div>
-    <section class="mt-50 mb-50" style="transform: none;">
+    </div> --}}
+    {{-- <section class="mt-50 mb-50" style="transform: none;">
         <div class="container" style="transform: none;">
             <div class="row" style="transform: none;">
                 <div class="col-lg-9">
@@ -31,16 +31,16 @@
                                                 </figure>
                                                 @endforeach
                                                 {{-- <figure class="border-radius-10 slick-slide" data-slick-index="2"
-                                                    aria-hidden="true" tabindex="-1" style="width: 336px;">
+                                                    --}} {{-- aria-hidden="true" tabindex="-1" style="width: 336px;">
                                                     <img src="assets/imgs/shop/product-16-3.jpg" alt="product image">
-                                                </figure> --}}
+                                                </figure>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- THUMBNAILS -->
                                     <div class="slider-nav-thumbnails pl-15 pr-15 slick-initialized slick-slider">
                                         <button type="button" class="slick-prev slick-arrow" style=""><i
-                                                class="fi-rs-angle-left"></i></button>
+                                                class="fi-rs-angle-left"></i></button> --}}
                                         {{-- <div class="slick-list draggable">
                                             <div class="slick-track"
                                                 style="opacity: 1; width: 1178px; transform: translate3d(-310px, 0px, 0px);">
@@ -122,7 +122,7 @@
                                                 </div>
                                             </div>
                                         </div> --}}
-                                        <button type="button" class="slick-next slick-arrow" style=""><i
+                                        {{-- <button type="button" class="slick-next slick-arrow" style=""><i
                                                 class="fi-rs-angle-right"></i></button>
                                     </div>
                                 </div>
@@ -139,7 +139,8 @@
                                         <li class="social-linkedin"><a href="www.pinterest.com"><img
                                                     src="assets/imgs/theme/icons/icon-pinterest.svg" alt=""></a></li>
                                     </ul>
-                                </div>
+                                </div> --}}
+                                {{--
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="detail-info">
@@ -152,8 +153,8 @@
                                             </div>
                                             <span class="font-small ml-5 text-muted"> (25 reviews)</span>
                                         </div>
-                                    </div>
-                                    <div class="clearfix product-price-cover">
+                                    </div> --}}
+                                    {{-- <div class="clearfix product-price-cover">
                                         <div class="product-price primary-color float-left">
                                             <ins><span class="text-brand">$120.00</span></ins>
                                             <ins><span class="old-price font-md ml-15">$200.00</span></ins>
@@ -176,35 +177,6 @@
                                             <li><i class="fi-rs-credit-card mr-5"></i> Cash on Delivery available</li>
                                         </ul>
                                     </div>
-                                    <div class="attr-detail attr-color mb-15">
-                                        <strong class="mr-10">Color</strong>
-                                        <ul class="list-filter color-filter">
-                                            <li><a href="#" data-color="Red"><span class="product-color-red"></span></a>
-                                            </li>
-                                            <li><a href="#" data-color="Yellow"><span
-                                                        class="product-color-yellow"></span></a></li>
-                                            <li class="active"><a href="#" data-color="White"><span
-                                                        class="product-color-white"></span></a></li>
-                                            <li><a href="#" data-color="Orange"><span
-                                                        class="product-color-orange"></span></a></li>
-                                            <li><a href="#" data-color="Cyan"><span
-                                                        class="product-color-cyan"></span></a></li>
-                                            <li><a href="#" data-color="Green"><span
-                                                        class="product-color-green"></span></a></li>
-                                            <li><a href="#" data-color="Purple"><span
-                                                        class="product-color-purple"></span></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="attr-detail attr-size">
-                                        <strong class="mr-10">Size</strong>
-                                        <ul class="list-filter size-filter font-small">
-                                            <li><a href="#">S</a></li>
-                                            <li class="active"><a href="#">M</a></li>
-                                            <li><a href="#">L</a></li>
-                                            <li><a href="#">XL</a></li>
-                                            <li><a href="#">XXL</a></li>
-                                        </ul>
-                                    </div>
                                     <div class="bt-1 border-color-1 mt-30 mb-30"></div>
                                     <div class="detail-extralink">
                                         <div class="detail-qty border radius">
@@ -219,7 +191,6 @@
                                         </div>
                                     </div>
                                     <ul class="product-meta font-xs color-grey mt-50">
-                                        <li class="mb-5">SKU: <a href="#">FWM15VKT</a></li>
                                         <li class="mb-5">Tags: <a href="#" rel="tag">Cloth</a>, <a href="#"
                                                 rel="tag">Women</a>, <a href="#" rel="tag">Dress</a> </li>
                                         <li>Availability:<span class="in-stock text-success ml-5">8 Items In
@@ -410,9 +381,9 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
                                                     <!--single-comment -->
-                                                    <div class="single-comment justify-content-between d-flex">
+                                                    {{-- <div class="single-comment justify-content-between d-flex">
                                                         <div class="user justify-content-between d-flex">
                                                             <div class="thumb text-center">
                                                                 <img src="assets/imgs/page/avatar-7.jpg" alt="">
@@ -496,7 +467,8 @@
                                                     <span>2 star</span>
                                                     <div class="progress-bar" role="progressbar" style="width: 65%;"
                                                         aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%
-                                                    </div>
+                                                        --}}
+                                                        {{-- </div>
                                                 </div>
                                                 <div class="progress mb-30">
                                                     <span>1 star</span>
@@ -572,10 +544,6 @@
                                                     </a>
                                                 </div>
                                                 <div class="product-action-1">
-                                                    <a aria-label="Quick view" class="action-btn small hover-up"
-                                                        href="{{ route('product.details', ['slug' => $product->slug]) }}"
-                                                        data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
-                                                            class="fi-rs-search"></i></a>
                                                     <a aria-label="Add To Wishlist" class="action-btn small hover-up"
                                                         href="{{ route('shop.wishlist') }}" tabindex="0"><i
                                                             class="fi-rs-heart"></i></a>
@@ -612,10 +580,6 @@
                                                     </a>
                                                 </div>
                                                 <div class="product-action-1">
-                                                    <a aria-label="Quick view" class="action-btn small hover-up"
-                                                        href="{{ route('product.details', ['slug' => $product->slug]) }}"
-                                                        data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
-                                                            class="fi-rs-search"></i></a>
                                                     <a aria-label="Add To Wishlist" class="action-btn small hover-up"
                                                         href="{{ route('shop.wishlist') }}" tabindex="0"><i
                                                             class="fi-rs-heart"></i></a>
@@ -652,10 +616,6 @@
                                                     </a>
                                                 </div>
                                                 <div class="product-action-1">
-                                                    <a aria-label="Quick view" class="action-btn small hover-up"
-                                                        href="{{ route('product.details', ['slug' => $product->slug]) }}"
-                                                        data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
-                                                            class="fi-rs-search"></i></a>
                                                     <a aria-label="Add To Wishlist" class="action-btn small hover-up"
                                                         href="{{ route('shop.wishlist') }}" tabindex="0"><i
                                                             class="fi-rs-heart"></i></a>
@@ -692,10 +652,6 @@
                                                     </a>
                                                 </div>
                                                 <div class="product-action-1">
-                                                    <a aria-label="Quick view" class="action-btn small hover-up"
-                                                        href="{{ route('product.details', ['slug' => $product->slug]) }}"
-                                                        data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
-                                                            class="fi-rs-search"></i></a>
                                                     <a aria-label="Add To Wishlist" class="action-btn small hover-up"
                                                         href="{{ route('shop.wishlist') }}" tabindex="0"><i
                                                             class="fi-rs-heart"></i></a>
@@ -842,4 +798,4 @@
             </div>
         </div>
     </section>
-</main>
+</main> --}}

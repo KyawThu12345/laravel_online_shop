@@ -80,6 +80,9 @@
                             </div>
                         </div>
                         <div class="row product-grid-3">
+                            @php
+                            $witems = Cart::instance('wishlist')->content()->pluck('id');
+                            @endphp
                             @foreach ($products as $product)
                             <div class="col-lg-4 col-md-4 col-6 col-sm-6">
                                 <div class="product-cart-wrap mb-30">
@@ -92,11 +95,19 @@
                                             </a>
                                         </div>
                                         <div class="product-action-1">
-                                            <a aria-label="Quick view" class="action-btn hover-up"
-                                                href="{{ route('product.details', ['slug' => $product->slug]) }}"
-                                                data-bs-toggle="modal" data-bs-target="#quickViewModal"></a>
+                                            @php
+                                            $witems = Cart::instance('wishlist')->content()->pluck('id');
+                                            @endphp
+                                            @if ($witems->contains($product->id))
+                                            <a aria-label="Remove From Wishlist" class="action-btn hover-up wishlisted"
+                                                href="#" wire:click.prevent="removeFromWishlist({{ $product->id }})"><i
+                                                    class="fi-rs-heart"></i></a>
+                                            @else
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up"
-                                                href="{{ route('shop.wishlist') }}"><i class="fi-rs-heart"></i></a>
+                                                href="{{ route('shop.wishlist') }}"
+                                                wire:click.prevent="addToWishlist({{ $product->id }},'{{ $product->name }}',{{ $product->regular_price }})"><i
+                                                    class="fi-rs-heart"></i></a>
+                                            @endif
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">Hot</span>
@@ -115,7 +126,6 @@
                                         </div>
                                         <div class="product-price">
                                             <span>${{ $product->regular_price }}</span>
-                                            {{-- <span class="old-price">$245.8</span> --}}
                                         </div>
                                         <div class="product-action-1 show">
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="#"

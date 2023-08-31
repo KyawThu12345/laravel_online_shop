@@ -101,12 +101,6 @@
                                                     alt="{{ $product->name }}" />
                                             </a>
                                         </div>
-                                        <div class="product-action-1">
-                                            <a aria-label="Quick view" class="action-btn hover-up"
-                                                href="{{ route('product.details', ['slug' => $product->slug]) }}"
-                                                data-bs-toggle="modal" data-bs-target="#quickViewModal">
-                                                <i class="fi-rs-search"></i></a>
-                                        </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">Hot</span>
                                         </div>
@@ -220,7 +214,8 @@
                                         alt="{{ $product->name }}">
                                 </div>
                                 <div class="content pt-10">
-                                    <h6><a href="{{ route('product.details', ['slug' => $product->slug]) }}">{{ $nproduct->name }}</a></h6>
+                                    <h6><a href="{{ route('product.details', ['slug' => $product->slug]) }}">{{
+                                            $nproduct->name }}</a></h6>
                                     <p class="price mb-0 mt-5">${{ $nproduct->regular_price }}</p>
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:75%"></div>

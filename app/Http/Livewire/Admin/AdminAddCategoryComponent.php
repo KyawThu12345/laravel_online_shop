@@ -5,7 +5,6 @@ namespace App\Http\Livewire\Admin;
 use App\Models\Category;
 use Livewire\Component;
 use Illuminate\Support\Str;
-
 class AdminAddCategoryComponent extends Component
 {
     public $name;

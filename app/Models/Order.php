@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+    protected $casts = [
+        'total' => 'decimal:2',
+    ];
     protected $table = "orders";
     public function user()
     {

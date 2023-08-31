@@ -13,7 +13,7 @@
             <div class="container">
                 <div class="breadcrumb">
                     <a href="/" rel="nofollow">Home</a>
-                    <span></span>
+                    <span></span> Admin
                     <span></span> All Slides
                 </div>
             </div>
