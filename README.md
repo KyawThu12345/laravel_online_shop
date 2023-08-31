@@ -53,7 +53,7 @@ For Backend ,
     ```sh
     php artisan migrate:fresh --seed
     ```
-### Database Seeder
+7. Database Seeder
     ```sh
     php artisan db:seed --class=AdminSeeder
     ```
