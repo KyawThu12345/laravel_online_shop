@@ -16,10 +16,9 @@ use Illuminate\Support\Facades\Log;
 class AdminAddProductComponent extends Component
 {
     use WithFileUploads;
-    public $name, $slug, $short_description, $description, $regular_price, $image, $sale_price,$rate, $SKU, $stock_status, $featured, $quantity, $category_id;
+    public $name, $slug, $short_description, $description, $regular_price, $image, $sale_price,$rate, $SKU, $featured, $quantity, $category_id;
     public function mount()
     {
-        $this->stock_status = 'instock';
         $this->featured = 0;
     }
     public function generateSlug()
@@ -44,7 +43,6 @@ class AdminAddProductComponent extends Component
         $product->sale_price = $this->sale_price;
         $product->rate = $this->rate;
         $product->SKU = $this->SKU;
-        $product->stock_status = $this->stock_status;
         $product->featured = $this->featured;
         $product->quantity = $this->quantity;
 

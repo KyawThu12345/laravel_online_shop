@@ -55,6 +55,11 @@ For Backend ,
     php artisan db:seed --class=SliderSeeder
     ```
 
+7. Storage Link
+    ```sh
+    php artisan storage:link
+    ```
+
 
 
 

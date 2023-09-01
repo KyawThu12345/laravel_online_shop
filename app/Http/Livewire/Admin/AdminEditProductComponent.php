@@ -14,7 +14,7 @@ class AdminEditProductComponent extends Component
 {
     use WithFileUploads;
     public $product;
-    public $name, $slug, $short_description, $description, $regular_price, $image, $sale_price, $SKU, $stock_status, $featured, $quantity, $category_id, $newimage, $product_id;
+    public $name, $slug, $short_description, $description, $regular_price, $image, $sale_price, $SKU, $featured, $quantity, $category_id, $newimage, $product_id;
     public function mount($product_slug)
     {
         $product = Product::where('slug', $product_slug)->first();
@@ -25,7 +25,6 @@ class AdminEditProductComponent extends Component
         $this->regular_price = $product->regular_price;
         $this->sale_price = $product->sale_price;
         $this->SKU = $product->SKU;
-        $this->stock_status = $product->stock_status;
         $this->featured = $product->featured;
         $this->quantity = $product->quantity;
         $this->image = $product->image;
@@ -53,7 +52,6 @@ class AdminEditProductComponent extends Component
             $product->regular_price = $this->regular_price;
             $product->sale_price = $this->sale_price;
             $product->SKU = $this->SKU;
-            $product->stock_status = $this->stock_status;
             $product->featured = $this->featured;
             $product->quantity = $this->quantity;
         } else {

@@ -69,15 +69,6 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12 control-label">Stock</label>
-                            <div class="col-md-12">
-                                <select class="form-control" wire:model="stock_status">
-                                    <option value="instock">Instock</option>
-                                    <option value="outofstock">Out of Stock</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="col-md-12 control-label">Featured</label>
                             <div class="col-md-12">
                                 <select class="form-control" wire:model="featured">

@@ -23,13 +23,6 @@
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="card-header">
-                        All Products
-                    </div>
-                    <div class="col-md-6 text-end">
-                        <a href="{{ route('admin.addproduct') }}" class="btn btn-success">Add
-                            Product</a>
-                    </div> --}}
                     <div class="card-body">
                         <table class="table table-striped">
                             <thead>
@@ -37,7 +30,6 @@
                                     <th>Id</th>
                                     <th>Image</th>
                                     <th>Name</th>
-                                    <th>Stock</th>
                                     <th>Price</th>
                                     <th>Rate</th>
                                     <th>Category</th>
@@ -55,7 +47,6 @@
 
                                     </td>
                                     <td>{{ $product->name }}</td>
-                                    <td>{{ $product->stock_status }}</td>
                                     <td>{{ $product->regular_price }}</td>
                                     <td>{{ $product->rate }}</td>
                                     <td>{{ $product->category->name }}</td>

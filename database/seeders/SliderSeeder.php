@@ -15,7 +15,7 @@ class SliderSeeder extends Seeder
     public function run(): void
     {
         HomeSlider::factory()
-            ->count(10)
+            ->count(4)
             ->create();
     }
 }

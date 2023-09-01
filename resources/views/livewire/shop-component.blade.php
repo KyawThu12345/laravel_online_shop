@@ -98,14 +98,10 @@
                                             <a href="{{ route('product.details', ['slug' => $product->slug]) }}">
                                                 <img class="default-img"
                                                     src="{{ asset('storage/assets/imgs/shop/products/' . $product->image) }}"
-                                                    alt="{{ $product->name }}" />
+                                                    {{--
+                                                    C:\xampp\htdocs\laravel_online_shop\public\assets\imgs\shop\products\livewire-tmp\Y4ZjxQTTWoKAgc9U7oK7CAdLYkOMU9-metaaHVtYW4ucG5n-.jpg
+                                                    --}} alt="{{ $product->name }}" />
                                             </a>
-                                        </div>
-                                        <div class="product-action-1">
-                                            <a aria-label="Quick view" class="action-btn hover-up"
-                                                href="{{ route('product.details', ['slug' => $product->slug]) }}"
-                                                data-bs-toggle="modal" data-bs-target="#quickViewModal">
-                                                <i class="fi-rs-search"></i></a>
                                         </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">Hot</span>
@@ -123,7 +119,7 @@
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>${{ $product->regular_price }}</span>
+                                            <span>${{ $product->sale_price }}</span>
                                         </div>
                                         <div class="product-action-1 show">
                                             @if ($witems->contains($product->id))
@@ -132,11 +128,11 @@
                                                     class="fi-rs-heart"></i></a>
                                             @else
                                             <a aria-label="Add To Wishlist" class="action-btn hover-up" href="#"
-                                                wire:click.prevent="addToWishlist({{ $product->id }},'{{ $product->name }}',{{ $product->regular_price }})"><i
+                                                wire:click.prevent="addToWishlist({{ $product->id }},'{{ $product->name }}',{{ $product->sale_price }})"><i
                                                     class="fi-rs-heart"></i></a>
                                             @endif
                                             <a aria-label="Add To Cart" class="action-btn hover-up" href="#"
-                                                wire:click.prevent="store({{ $product->id }},'{{ $product->name }}',{{ $product->regular_price }})"><i
+                                                wire:click.prevent="store({{ $product->id }},'{{ $product->name }}',{{ $product->sale_price }})"><i
                                                     class="fi-rs-shopping-bag-add"></i></a>
                                         </div>
                                     </div>
@@ -220,8 +216,9 @@
                                         alt="{{ $product->name }}">
                                 </div>
                                 <div class="content pt-10">
-                                    <h6><a href="{{ route('product.details', ['slug' => $product->slug]) }}">{{ $nproduct->name }}</a></h6>
-                                    <p class="price mb-0 mt-5">${{ $nproduct->regular_price }}</p>
+                                    <h6><a href="{{ route('product.details', ['slug' => $product->slug]) }}">{{
+                                            $nproduct->name }}</a></h6>
+                                    <p class="price mb-0 mt-5">${{ $nproduct->sale_price }}</p>
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:75%"></div>
                                     </div>
