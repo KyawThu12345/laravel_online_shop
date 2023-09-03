@@ -5,7 +5,7 @@
                 <div class="breadcrumb">
                     <a href="/" rel="nofollow">Home</a>
                     <span></span>
-                    <a href="{{ route('shop') }}">Shop</a>
+                    <a href="{{ route('shop') }}">Admin</a>
                     <span></span> All Coupons
                 </div>
             </div>

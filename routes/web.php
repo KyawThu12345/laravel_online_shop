@@ -69,14 +69,14 @@ Route::get('/search', SearchComponent::class)->name('product.search');
 Route::get('/wishlist', WishlistComponent::class)->name('shop.wishlist');
 Route::get('/deliveryinformation', DeliveryInformationComponent::class)->name('shop.deliveryinformation');
 Route::get('/deliveryinformation', DeliveryInformationComponent::class)->name('shop.deliveryinformation');
-// Route::get('/thank-you', ThankyouComponent::class)->name('thankyou');
+Route::get('/thank-you', ThankyouComponent::class)->name('thankyou');
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
 Route::post('/contact_mail', [ContactComponent::class, 'contact_mail_send'])->name('contact_mail');
 
 Route::middleware('auth')->group(function () {
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
-    // Route::get('/user/orders', UserOrdersComponent::class)->name('user.orders');
-    // Route::get('/user/orders/{order_id}', UserOrderDetailsComponent::class)->name('user.orderdetails');
+    Route::get('/user/orders', UserOrdersComponent::class)->name('user.orders');
+    Route::get('/user/orders/{order_id}', UserOrderDetailsComponent::class)->name('user.orderdetails');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -98,9 +98,9 @@ Route::middleware('auth', 'authadmin')->group(function () {
     Route::get('/admin/coupons', AdminCouponsComponent::class)->name('admin.coupons');
     Route::get('/admin/coupon/add', AdminAddCouponComponent::class)->name('admin.addcoupon');
     Route::get('/admin/coupon/edit/{coupon_id}', AdminEditCouponComponent::class)->name('admin.editcoupon');
-    // Route::get('/admin/orders', AdminOrderComponent::class)->name('admin.orders');
+    Route::get('/admin/orders', AdminOrderComponent::class)->name('admin.orders');
     // Route::get('/admin/orders/{order_id}', AdminOrderDetailsComponent::class)->name('admin.orderdetails');
-    // Route::get('/admin/customersview', AdminCustomersViewComponent::class)->name('admin.customersview');
+    Route::get('/admin/customersview', AdminCustomersViewComponent::class)->name('admin.customersview');
 });
 
 require __DIR__ . '/auth.php';

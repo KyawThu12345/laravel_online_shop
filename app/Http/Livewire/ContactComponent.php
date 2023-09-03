@@ -16,6 +16,7 @@ class ContactComponent extends Component
     public function contact_mail_send(Request $request)
     {
         Mail::to('minkyawt733@gmail.com')->send(new ContactMail($request));
+        session()->flash('message', 'Email sent successfully.');
         return redirect('contact');
     }
 

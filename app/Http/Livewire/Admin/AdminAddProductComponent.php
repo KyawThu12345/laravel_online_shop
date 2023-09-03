@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Log;
 class AdminAddProductComponent extends Component
 {
     use WithFileUploads;
-    public $name, $slug, $short_description, $description, $regular_price, $image, $sale_price,$rate, $SKU, $featured, $quantity, $category_id;
+    public $name, $slug, $short_description, $description, $regular_price, $image, $sale_price, $rate, $stock_status, $quantity, $category_id;
     public function mount()
     {
-        $this->featured = 0;
+        $this->stock_status = 'instock';
     }
     public function generateSlug()
     {
@@ -42,8 +42,7 @@ class AdminAddProductComponent extends Component
         $product->regular_price = $this->regular_price;
         $product->sale_price = $this->sale_price;
         $product->rate = $this->rate;
-        $product->SKU = $this->SKU;
-        $product->featured = $this->featured;
+        $product->stock_status = $this->stock_status;
         $product->quantity = $this->quantity;
 
         if ($this->image) {
@@ -68,7 +67,7 @@ class AdminAddProductComponent extends Component
         return view('livewire.admin.admin-add-product-component', [
             'categories' => $categories,
             'products' => $products,
-            'image' => $this->image,  // Make sure this line is included
+            'image' => $this->image, // Make sure this line is included
         ]);
     }
 }

@@ -15,8 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="m-auto col-xl-8 col-lg-10">
-                <div class="contact-from-area padding-20-row-col wow FadeInUp animated"
-                    style="visibility: visible;">
+                <div class="contact-from-area padding-20-row-col wow FadeInUp animated" style="visibility: visible;">
                     <h1 class="mb-10 text-center">CONTACT US</h1>
                     <div class="container p-2 mb-20 bg-light mt-30">
                         <h2 class="m-2 HC">Get in touch</h3>
@@ -25,11 +24,14 @@
                                 <br>you can reach us....
                             </p>
                     </div>
-                    <form class="text-center contact-form-style" id="contact-form" method="post" wire:submit.prevent="contact_mail_send" action="{{ route('contact_mail') }}">
+                    <form class="text-center contact-form-style" id="contact-form" method="post"
+                        wire:submit.prevent="contact_mail_send" action="{{ route('contact_mail') }}">
                         @csrf
                         <div class="row">
                             @if (session()->has('message'))
-                            <div class="alert alert-success">{{ session('message') }}</div>
+                            <div class="alert alert-success col-lg-12">
+                                {{ session('message') }}
+                            </div>
                             @endif
                             <div class="col-lg-6 col-md-6">
                                 <div class="mb-20 input-style">
