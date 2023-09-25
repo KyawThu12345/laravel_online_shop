@@ -28,10 +28,6 @@
                                 <li>
                                     <a href="#"> <i class="fi-rs-world"></i> English <i
                                             class="fi-rs-angle-small-down"></i></a>
-                                    <ul class="language-dropdown">
-                                        <li><a href="#"><img src="assets/imgs/theme/flag-jp.png" alt="">Japan</a></li>
-                                        <li><a href="#"><img src="assets/imgs/theme/flag-mm.png" alt="">Myanmar</a></li>
-                                    </ul>
                                 </li>
                             </ul>
                         </div>
@@ -109,19 +105,19 @@
                                         @auth
                                         @if (Auth::user()->utype == 'ADM')
                                         <ul class="sub-menu">
-                                            <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
-                                            <li><a href="#">New Admin</a>
-                                            </li>
-                                            <li><a href="{{ route('admin.products') }}">Products</a></li>
-                                            <li><a href="{{ route('admin.home.slider') }}">Slider</a></li>
-                                            <li><a href="{{ route('admin.catagories') }}">Categories</a></li>
+                                            <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
+
+                                            <li><a href="{{ route('admin.products') }}">All Products</a></li>
+                                            <li><a href="{{ route('admin.home.slider') }}">All Sliders</a></li>
+                                            <li><a href="{{ route('admin.catagories') }}">All Categories</a></li>
                                             <li><a href="{{ route('admin.coupons') }}">All Coupons</a></li>
-                                            <li><a href="#">Orders</a></li>
-                                            <li><a href="#">Customers</a></li>
+                                            <li><a href="{{ route('admin.orders') }}">All Orders</a></li>
+                                            <li><a href="{{ route('admin.customersview') }}">All Customers</a></li>
+
                                         </ul>
                                         @else
                                         <ul class="sub-menu">
-                                            <li><a href="{{ route('user.dashboard') }}">Dashboard</a></li>
+                                            <li><a href="{{ route('shop.my-account') }}">User Dashboard</a></li>
                                         </ul>
                                         @endif
                                         @endif
@@ -138,55 +134,10 @@
                     <div class="header-action-right d-block d-lg-none">
                         <div class="header-action-2">
                             <div class="header-action-icon-2">
-                                <a href="shop-wishlist.php">
-                                    <img alt="EazyMart" src="assets/imgs/theme/icons/icon-heart.svg">
-                                    <span class="pro-count white">4</span>
-                                </a>
+                                @livewire('wishlist-icon-component')
                             </div>
                             <div class="header-action-icon-2">
-                                <a class="mini-cart-icon" href="cart.html">
-                                    <img alt="EazyMart" src="assets/imgs/theme/icons/icon-cart.svg">
-                                    <span class="pro-count white">2</span>
-                                </a>
-                                <div class="cart-dropdown-wrap cart-dropdown-hm2">
-                                    <ul>
-                                        <li>
-                                            <div class="shopping-cart-img">
-                                                <a href="product-details.html"><img alt="EazyMart"
-                                                        src="assets/imgs/shop/thumbnail-3.jpg"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="product-details.html">Plain Striola Shirts</a></h4>
-                                                <h3><span>1 × </span>$800.00</h3>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="shopping-cart-img">
-                                                <a href="product-details.html"><img alt="EazyMart"
-                                                        src="assets/imgs/shop/thumbnail-4.jpg"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="product-details.html">Macbook Pro 2022</a></h4>
-                                                <h3><span>1 × </span>$3500.00</h3>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="shopping-cart-footer">
-                                        <div class="shopping-cart-total">
-                                            <h4>Total <span>$383.00</span></h4>
-                                        </div>
-                                        <div class="shopping-cart-button">
-                                            <a href="{{ route('shop.cart') }}">View cart</a>
-                                            <a href="{{ route('shop.checkout') }}">Checkout</a>
-                                        </div>
-                                    </div>
-                                </div>
+                                @livewire('cart-icon-component')
                             </div>
                             <div class="header-action-icon-2 d-block d-lg-none">
                                 <div class="burger-icon burger-icon-white">
@@ -229,8 +180,6 @@
                             <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Language</a>
                                 <ul class="dropdown">
                                     <li><a href="#">English</a></li>
-                                    <li><a href="#">Myanmar</a></li>
-                                    <li><a href="#">Japan</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -251,45 +200,12 @@
                         <a href="#">(+95) 9986-665-101 </a>
                     </div>
                 </div>
-                <div class="mobile-social-icon">
-                    <h5 class="mb-15 text-grey-4">Follow Us</h5>
-                    <a href="#"><img src="assets/imgs/theme/icons/icon-facebook.svg" alt=""></a>
-                    <a href="#"><img src="assets/imgs/theme/icons/icon-twitter.svg" alt=""></a>
-                    <a href="#"><img src="assets/imgs/theme/icons/icon-instagram.svg" alt=""></a>
-                    <a href="#"><img src="assets/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
-                    <a href="#"><img src="assets/imgs/theme/icons/icon-youtube.svg" alt=""></a>
-                </div>
             </div>
         </div>
     </div>
     {{ $slot }}
     <footer class="main">
-        <section class="newsletter p-30 text-white wow fadeIn animated">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7 mb-md-3 mb-lg-0">
-                        <div class="row align-items-center">
-                            <div class="col flex-horizontal-center">
-                                <img class="icon-email" src="assets/imgs/theme/icons/icon-email.svg" alt="">
-                                <h4 class="font-size-20 mb-0 ml-3">Sign up to Newsletter</h4>
-                            </div>
-                            <div class="col my-4 my-md-0 des">
-                                <h5 class="font-size-15 ml-4 mb-0">...and receive <strong>$25 coupon for first
-                                        shopping.</strong></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <!-- Subscribe Form -->
-                        <form class="form-subcriber d-flex wow fadeIn animated">
-                            <input type="email" class="form-control bg-white font-small" placeholder="Enter your email">
-                            <button class="btn bg-dark text-white" type="submit">Subscribe</button>
-                        </form>
-                        <!-- End Subscribe Form -->
-                    </div>
-                </div>
-            </div>
-        </section>
+        <hr>
         <section class="section-padding footer-mid">
             <div class="container pt-15 pb-20">
                 <div class="row">
@@ -308,14 +224,6 @@
                             <p class="wow fadeIn animated">
                                 <strong>Email: </strong>minkyawt733@gmail.com
                             </p>
-                            <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
-                            <div class="mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0">
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-facebook.svg" alt=""></a>
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-twitter.svg" alt=""></a>
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-instagram.svg" alt=""></a>
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-pinterest.svg" alt=""></a>
-                                <a href="#"><img src="assets/imgs/theme/icons/icon-youtube.svg" alt=""></a>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-3">
@@ -331,25 +239,15 @@
                     <div class="col-lg-2  col-md-3">
                         <h5 class="widget-title wow fadeIn animated">My Account</h5>
                         <ul class="footer-list wow fadeIn animated">
-                            <li><a href="{{ route('shop.my-account') }}">My Account</a></li>
                             <li><a href="{{ route('shop.cart') }}">View Cart</a></li>
                             <li><a href="{{ route('shop.wishlist') }}">My Wishlist</a></li>
                             <li><a href="#">Track My Order</a></li>
                             <li><a href="#">Order</a></li>
+                            {{-- <li><a href="{{ route('user.orders') }}">Order</a></li> --}}
                         </ul>
                     </div>
                     <div class="col-lg-4 mob-center">
-                        <h5 class="widget-title wow fadeIn animated">Install App</h5>
                         <div class="row">
-                            <div class="col-md-8 col-lg-12">
-                                <p class="wow fadeIn animated">From App Store or Google Play</p>
-                                <div class="download-app wow fadeIn animated mob-app">
-                                    <a href="#" class="hover-up mb-sm-4 mb-lg-0"><img class="active"
-                                            src="{{ asset('assets/imgs/theme/app-store.jpg') }}" alt=""></a>
-                                    <a href="#" class="hover-up"><img
-                                            src="{{ asset('assets/imgs/theme/google-play.jpg') }}" alt=""></a>
-                                </div>
-                            </div>
                             <div class="col-md-4 col-lg-12 mt-md-3 mt-lg-0">
                                 <p class="mb-20 wow fadeIn animated">Secured Payment Gateways</p>
                                 <img class="wow fadeIn animated"
@@ -404,6 +302,11 @@
     <!-- Template  JS -->
     <script src="{{ asset('assets/js/main.js?v=3.3') }}"></script>
     <script src="{{ asset('assets/js/shop.js?v=3.3') }}"></script>
+    <script>
+        Livewire.on('thankYou', function () {
+            window.location.href = '{{ route('thankyou') }}';
+        });
+    </script>
     @livewireScripts
 </body>
 

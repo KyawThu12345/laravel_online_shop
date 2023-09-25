@@ -726,11 +726,7 @@
                 </div>
                 <div class="col-lg-3 primary-sidebar sticky-sidebar"
                     style="position: relative; overflow: visible; box-sizing: border-box; min-height: 1px;">
-
-                    <!-- Fillter By Price -->
-
                     <!-- Product sidebar Widget -->
-
                     <div class="theiaStickySidebar"
                         style="padding-top: 0px; padding-bottom: 1px; position: static; transform: none; top: 0px; left: 1074.4px;">
                         <div class="widget-category mb-30">

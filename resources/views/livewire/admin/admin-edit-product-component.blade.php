@@ -63,30 +63,6 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-12 control-label">SKU</label>
-                            <div class="col-md-12">
-                                <input type="text" placeholder="SKU" class="form-control input-md" wire:model="SKU" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-12 control-label">Stock</label>
-                            <div class="col-md-12">
-                                <select class="form-control" wire:model="stock_status">
-                                    <option value="instock">Instock</option>
-                                    <option value="outofstock">Out of Stock</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-12 control-label">Featured</label>
-                            <div class="col-md-12">
-                                <select class="form-control" wire:model="featured">
-                                    <option value="0">No</option>
-                                    <option value="1">Yes</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label class="col-md-12 control-label">Quantity</label>
                             <div class="col-md-12">
                                 <input type="text" placeholder="Quantity" class="form-control input-md"

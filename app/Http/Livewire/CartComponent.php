@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use Livewire\Component;
 
 class CartComponent extends Component
@@ -135,11 +136,8 @@ class CartComponent extends Component
             }
             // dd("Discount: " . $this->discount);
             // dd("Subtotal: " . Cart::instance('cart')->subtotal());
-            $this->subtotalAfterDiscount = Cart::instance('cart')->subtotal() - $this->discount;
-            $this->taxAfterDiscount = ($this->subtotalAfterDiscount * config('cart.tax')) / 100;
-            $this->totalAfterDiscount = $this->subtotalAfterDiscount + $this->taxAfterDiscount;
-            // dd($this->subtotalAfterDiscount, $this->taxAfterDiscount, $this->totalAfterDiscount);
-
+            $this->totalAfterDiscount = Cart::instance('cart')->total() - $this->discount;
+            // $this->totalAfterDiscount = $this->subtotalAfterDiscount + $this->taxAfterDiscount;
             session()->put('discounted_values.subtotalAfterDiscount', $this->subtotalAfterDiscount);
             session()->put('discounted_values.taxAfterDiscount', $this->taxAfterDiscount);
             session()->put('discounted_values.totalAfterDiscount', $this->totalAfterDiscount);
@@ -148,6 +146,29 @@ class CartComponent extends Component
     public function removeCoupon()
     {
         session()->forget('coupon');
+    }
+
+    public function setAmountForCheckout()
+    {
+        if (!Cart::instance('cart')->count() > 0) {
+            session()->forget('checkout');
+            return;
+        }
+        if (session()->has('coupon')) {
+            session()->put('checkout', [
+                'discount' => $this->discount,
+                'subtotal' => $this->subtotalAfterDiscount,
+                'tax' => $this->taxAfterDiscount,
+                'total' => $this->totalAfterDiscount
+            ]);
+        } else {
+            session()->put('checkout', [
+                'discount' => 0,
+                'subtotal' => Cart::instance('cart')->subtotal(),
+                'tax' => Cart::instance('cart')->tax(),
+                'total' => Cart::instance('cart')->total(),
+            ]);
+        }
     }
     public function render()
     {
@@ -159,6 +180,10 @@ class CartComponent extends Component
             } else {
                 $this->calculateDiscounts();
             }
+        }
+        if (session()->has('checkout_redirect')) {
+            $this->setAmountForCheckout();
+            return Redirect::route('shop.checkout');
         }
         return view('livewire.cart-component');
     }

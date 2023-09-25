@@ -101,12 +101,6 @@
                                                     alt="{{ $product->name }}" />
                                             </a>
                                         </div>
-                                        <div class="product-action-1">
-                                            <a aria-label="Quick view" class="action-btn hover-up"
-                                                href="{{ route('product.details', ['slug' => $product->slug]) }}"
-                                                data-bs-toggle="modal" data-bs-target="#quickViewModal">
-                                                <i class="fi-rs-search"></i></a>
-                                        </div>
                                         <div class="product-badges product-badges-position product-badges-mrg">
                                             <span class="hot">Hot</span>
                                         </div>
@@ -163,50 +157,6 @@
                                 @endforeach
                             </ul>
                         </div>
-                        <!-- Fillter By Price -->
-                        <div class="sidebar-widget price_range range mb-30">
-                            <div class="widget-header position-relative mb-20 pb-10">
-                                <h5 class="widget-title mb-10">Fillter by price</h5>
-                                <div class="bt-1 border-color-1"></div>
-                            </div>
-                            <div class="price-filter">
-                                <div class="price-filter-inner">
-                                    <div id="slider-range" wire:ignore></div>
-                                    <div class="price_slider_amount">
-                                        <div class="label-input">
-                                            <span>Range:</span>
-                                            <span class="text-info">${{ $min_value }}</span><span class="text-info">${{
-                                                $max_value }}</span>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="list-group">
-                                <div class="list-group-item mb-10 mt-10">
-                                    <label class="fw-900 mt-15">Item Condition</label>
-                                    <div class="custome-checkbox">
-                                        <input class="form-check-input" type="checkbox" name="checkbox"
-                                            id="exampleCheckbox11" value="">
-                                        <label class="form-check-label" for="exampleCheckbox11"><span>New
-                                                (1506)</span></label>
-                                        <br>
-                                        <input class="form-check-input" type="checkbox" name="checkbox"
-                                            id="exampleCheckbox21" value="">
-                                        <label class="form-check-label" for="exampleCheckbox21"><span>Refurbished
-                                                (27)</span></label>
-                                        <br>
-                                        <input class="form-check-input" type="checkbox" name="checkbox"
-                                            id="exampleCheckbox31" value="">
-                                        <label class="form-check-label" for="exampleCheckbox31"><span>Used
-                                                (45)</span></label>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="{{ route('shop') }}" class="btn btn-sm btn-default"><i
-                                    class="fi-rs-filter mr-5"></i>
-                                Fillter</a>
-                        </div>
                         <!-- Product sidebar Widget -->
                         <div class="sidebar-widget product-sidebar  mb-30 p-30 bg-grey border-radius-10">
                             <div class="widget-header position-relative mb-20 pb-10">
@@ -220,7 +170,8 @@
                                         alt="{{ $product->name }}">
                                 </div>
                                 <div class="content pt-10">
-                                    <h6><a href="{{ route('product.details', ['slug' => $product->slug]) }}">{{ $nproduct->name }}</a></h6>
+                                    <h6><a href="{{ route('product.details', ['slug' => $product->slug]) }}">{{
+                                            $nproduct->name }}</a></h6>
                                     <p class="price mb-0 mt-5">${{ $nproduct->regular_price }}</p>
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:75%"></div>

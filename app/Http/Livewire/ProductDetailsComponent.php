@@ -9,7 +9,8 @@ class ProductDetailsComponent extends Component
 {
     public function render()
     {
-        return view('livewire.product-details-component'
-    );
+        return view(
+            'livewire.product-details-component'
+        );
     }
 }

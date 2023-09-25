@@ -7,6 +7,10 @@ use Livewire\Component;
 
 class MyAccountComponent extends Component
 {
+    public function redirectOrders()
+    {
+        return redirect()->route('user.orders');
+    }
     public function logout()
     {
         Auth::logout();

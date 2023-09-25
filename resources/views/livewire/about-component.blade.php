@@ -22,7 +22,7 @@
                     achieving your goals</p>
             </div>
             <div class="col-lg-6">
-                <img src="assets/imgs/page/about-1.png" alt="">
+                <img src="{{ asset('assets/imgs/page/about-1.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -45,7 +45,7 @@
                     style="visibility: visible;">
                     <div class="hero-card-icon icon-left-2 hover-up ">
                         <img class="btn-shadow-brand hover-up border-radius-5 bg-brand-muted"
-                            src="assets/imgs/page/avatar-1.jpg" alt="">
+                            src="{{ asset('assets/imgs/page/avatar-1.jpg') }}" alt="">
                     </div>
                     <div class="pl-30">
                         <h5 class="mb-5 fw-500">
@@ -62,7 +62,7 @@
                     style="visibility: visible;">
                     <div class="hero-card-icon icon-left-2 hover-up ">
                         <img class="btn-shadow-brand hover-up border-radius-5 bg-brand-muted"
-                            src="assets/imgs/page/avatar-3.jpg" alt="">
+                            src="{{ asset('assets/imgs/page/avatar-3.jpg') }}" alt="">
                     </div>
                     <div class="pl-30">
                         <h5 class="mb-5 fw-500">
@@ -79,7 +79,7 @@
                     style="visibility: visible;">
                     <div class="hero-card-icon icon-left-2 hover-up ">
                         <img class="btn-shadow-brand hover-up border-radius-5 bg-brand-muted"
-                            src="assets/imgs/page/avatar-2.jpg" alt="">
+                            src="{{ asset('assets/imgs/page/avatar-2.jpg') }}" alt="">
                     </div>
                     <div class="pl-30">
                         <h5 class="mb-5 fw-500">
@@ -96,7 +96,7 @@
                     style="visibility: visible;">
                     <div class="hero-card-icon icon-left-2 hover-up ">
                         <img class="btn-shadow-brand hover-up border-radius-5 bg-brand-muted"
-                            src="assets/imgs/page/avatar-4.jpg" alt="">
+                            src="{{ asset('assets/imgs/page/avatar-4.jpg') }}" alt="">
                     </div>
                     <div class="pl-30">
                         <h5 class="mb-5 fw-500">
@@ -113,7 +113,7 @@
                     style="visibility: visible;">
                     <div class="hero-card-icon icon-left-2 hover-up ">
                         <img class="btn-shadow-brand hover-up border-radius-5 bg-brand-muted"
-                            src="assets/imgs/page/avatar-5.jpg" alt="">
+                            src="{{ asset('assets/imgs/page/avatar-5.jpg') }}" alt="">
                     </div>
                     <div class="pl-30">
                         <h5 class="mb-5 fw-500">
@@ -130,7 +130,7 @@
                     style="visibility: visible;">
                     <div class="hero-card-icon icon-left-2 hover-up ">
                         <img class="btn-shadow-brand hover-up border-radius-5 bg-brand-muted"
-                            src="assets/imgs/page/avatar-1.jpg" alt="">
+                            src="{{ asset('assets/imgs/page/avatar-1.jpg') }}" alt="">
                     </div>
                     <div class="pl-30">
                         <h5 class="mb-5 fw-500">

@@ -74,7 +74,7 @@
                                                     <div class="product-rating" style="width:90%">
                                                     </div>
                                                 </div>
-                                                <span class="font-small ml-5 text-muted"> (25 reviews)</span>
+                                                <span class="font-small ml-5 text-muted">rating</span>
                                             </div>
                                         </div>
                                         <div class="clearfix product-price-cover">
@@ -97,55 +97,32 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="attr-detail attr-color mb-15">
-                                            <strong class="mr-10">Color</strong>
-                                            <ul class="list-filter color-filter">
-                                                <li><a href="#" data-color="Red"><span
-                                                            class="product-color-red"></span></a></li>
-                                                <li><a href="#" data-color="Yellow"><span
-                                                            class="product-color-yellow"></span></a></li>
-                                                <li class="active"><a href="#" data-color="White"><span
-                                                            class="product-color-white"></span></a></li>
-                                                <li><a href="#" data-color="Orange"><span
-                                                            class="product-color-orange"></span></a></li>
-                                                <li><a href="#" data-color="Cyan"><span
-                                                            class="product-color-cyan"></span></a></li>
-                                                <li><a href="#" data-color="Green"><span
-                                                            class="product-color-green"></span></a></li>
-                                                <li><a href="#" data-color="Purple"><span
-                                                            class="product-color-purple"></span></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="attr-detail attr-size">
-                                            <strong class="mr-10">Size</strong>
-                                            <ul class="list-filter size-filter font-small">
-                                                <li><a href="#">S</a></li>
-                                                <li class="active"><a href="#">M</a></li>
-                                                <li><a href="#">L</a></li>
-                                                <li><a href="#">XL</a></li>
-                                                <li><a href="#">XXL</a></li>
-                                            </ul>
-                                        </div>
                                         <div class="bt-1 border-color-1 mt-30 mb-30"></div>
                                         <div class="detail-extralink">
-                                            <div class="detail-qty border radius">
-                                                <a href="#" class="qty-down"><i class="fi-rs-angle-small-down"></i></a>
-                                                <span class="qty-val">1</span>
-                                                <a href="#" class="qty-up"><i class="fi-rs-angle-small-up"></i></a>
-                                            </div>
                                             <div class="product-extra-link2">
                                                 <button type="button" class="button button-add-to-cart"
                                                     wire:click.prevent="store({{ $product->id }},'{{ $product->name }}',{{ $product->regular_price }})">Add
                                                     to
                                                     cart</button>
-                                                <a aria-label="Add To Wishlist" class="action-btn hover-up"
-                                                    href="{{ route('shop.wishlist') }}"><i class="fi-rs-heart"></i></a>
+                                                @php
+                                                $witems = Cart::instance('wishlist')->content()->pluck('id');
+                                                @endphp
+                                                @if ($witems->contains($product->id))
+                                                <a aria-label="Remove From Wishlist"
+                                                    class="action-btn hover-up wishlisted" href="#"
+                                                    wire:click.prevent="removeFromWishlist({{ $product->id }})"><i
+                                                        class="fi-rs-heart"></i></a>
+                                                @else
+                                                <a aria-label="Add To Wishlist" class="action-btn hover-up" href="#"
+                                                    wire:click.prevent="addToWishlist({{ $product->id }},'{{ $product->name }}',{{ $product->regular_price }})"><i
+                                                        class="fi-rs-heart"></i></a>
+                                                @endif
                                             </div>
                                         </div>
                                         <ul class="product-meta font-xs color-grey mt-50">
-                                            <li class="mb-5">SKU: <a href="#">{{ $product->SKU }}</a></li>
                                             <li class="mb-5">Tags: <a href="#" rel="tag">{{ $product->name }}</a></li>
-                                            <li>Availability:<span class="in-stock text-success ml-5">{{ $product->quantity }} Items In
+                                            <li>Availability:<span class="in-stock text-success ml-5">{{
+                                                    $product->quantity }} Items In
                                                     Stock</span></li>
                                         </ul>
                                     </div>
@@ -465,16 +442,20 @@
                                                         </a>
                                                     </div>
                                                     <div class="product-action-1">
-                                                        @if ($product !== null && isset($product->slug))
-                                                        <a aria-label="Quick view" class="action-btn small hover-up"
-                                                            href="{{ route('product.details', ['slug' => $product->slug]) }}"
-                                                            data-bs-toggle="modal" data-bs-target="#quickViewModal"></a>
+                                                        @php
+                                                        $witems = Cart::instance('wishlist')->content()->pluck('id');
+                                                        @endphp
+                                                        @if ($witems->contains($rproduct->id))
+                                                        <a aria-label="Remove From Wishlist"
+                                                            class="action-btn hover-up wishlisted" href="#"
+                                                            wire:click.prevent="removeFromWishlist({{ $rproduct->id }})"><i
+                                                                class="fi-rs-heart"></i></a>
+                                                        @else
+                                                        <a aria-label="Add To Wishlist" class="action-btn hover-up"
+                                                            href="{{ route('shop.wishlist') }}"
+                                                            wire:click.prevent="addToWishlist({{ $rproduct->id }},'{{ $rproduct->name }}',{{ $rproduct->regular_price }})"><i
+                                                                class="fi-rs-heart"></i></a>
                                                         @endif
-                                                        <a aria-label="Add To Wishlist"
-                                                            class="action-btn small hover-up"
-                                                            href="{{ route('shop.wishlist') }}" tabindex="0">
-                                                            <i class="fi-rs-heart"></i>
-                                                        </a>
                                                     </div>
 
                                                     <div

@@ -12,14 +12,9 @@
                                             class="fi-rs-settings-sliders mr-10"></i>Dashboard</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="orders-tab" data-bs-toggle="tab" href="#orders" role="tab"
-                                        aria-controls="orders" aria-selected="false"><i
+                                    <a class="nav-link" id="orders-tab" data-bs-toggle="tab" href="#" role="tab"
+                                        aria-controls="orders" aria-selected="false" wire:click='redirectOrders'><i
                                             class="fi-rs-shopping-bag mr-10"></i>Orders</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="track-orders-tab" data-bs-toggle="tab" href="#track-orders"
-                                        role="tab" aria-controls="track-orders" aria-selected="false"><i
-                                            class="fi-rs-shopping-cart-check mr-10"></i>Track Your Order</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="address-tab" data-bs-toggle="tab" href="#address" role="tab"
@@ -44,11 +39,12 @@
                                 aria-labelledby="dashboard-tab">
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5 class="mb-0">Hello Rosie! </h5>
+                                        <h5 class="mb-0">Hello {{ Auth::user()->name }}</h5>
                                     </div>
                                     <div class="card-body">
                                         <p>From your account dashboard. you can easily check &amp; view your <a
-                                                href="#">recent orders</a>, manage your <a href="#">shipping and billing
+                                                href="#">recent orders</a>, manage your <a href="#">shipping and
+                                                billing
                                                 addresses</a> and <a href="#">edit your password and account
                                                 details.</a></p>
                                     </div>
@@ -140,10 +136,9 @@
                                                 <h5 class="mb-0">Billing Address</h5>
                                             </div>
                                             <div class="card-body">
-                                                <address>000 Interstate<br> 00 Business Spur,<br> Sault Ste. <br>Marie,
-                                                    MI 00000</address>
-                                                <p>New York</p>
-                                                <a href="#" class="btn-small">Edit</a>
+                                                <address>123 Inter<br> 24 Business ,<br> LayDaungKan. <br>Thingangyun,
+                                                    Yg 14789</address>
+                                                <p>Yangon</p>
                                             </div>
                                         </div>
                                     </div>
@@ -153,10 +148,9 @@
                                                 <h5 class="mb-0">Shipping Address</h5>
                                             </div>
                                             <div class="card-body">
-                                                <address>4299 Express Lane<br>
-                                                    Sarasota, <br>FL 00000 USA <br>Phone: 1.000.000.0000</address>
-                                                <p>Sarasota</p>
-                                                <a href="#" class="btn-small">Edit</a>
+                                                <address>5879 Express Lane<br>
+                                                    Zay Lay, <br>FL 1596 PG <br>Phone: 09986665101</address>
+                                                <p>Pago</p>
                                             </div>
                                         </div>
                                     </div>

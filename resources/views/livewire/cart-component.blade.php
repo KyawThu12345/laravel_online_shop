@@ -59,7 +59,7 @@
                                             </h5>
                                         </td>
                                         <td class="price" data-title="Price">
-                                            <span>${{ $item->model->regular_price }}</span>
+                                            <span>${{ $item->model->sale_price }}</span>
                                         </td>
                                         <td class="text-center" data-title="Stock">
                                             <div class="detail-qty border radius  m-auto">
@@ -214,13 +214,16 @@
                                             @endif
                                         </div>
                                     </div>
+                                    <?php
+                                    $paymentIntent = "your_payment_intent_value"; // Replace with your actual payment intent value
+                                    $checkoutRoute = route('shop.checkout', ['paymentIntent' => $paymentIntent]);
+?>
                                     @if (Auth::user())
-                                    <a href="{{ route('shop.checkout') }}" class="btn "> <i
-                                            class="fi-rs-box-alt mr-10"></i>
+                                    <a href="{{ $checkoutRoute }}" class="btn "> <i class="fi-rs-box-alt mr-10"
+                                            wire:click='placeOrder'></i>
                                         Proceed To CheckOut</a>
                                     @else
-                                    <a href="{{ route('login') }}" class="btn "> <i
-                                            class="fi-rs-box-alt mr-10"></i>
+                                    <a href="{{ route('login') }}" class="btn "> <i class="fi-rs-box-alt mr-10"></i>
                                         Proceed To CheckOut</a>
                                     @endif
                                 </div>

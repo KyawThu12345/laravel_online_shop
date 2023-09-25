@@ -12,7 +12,7 @@ class AdminDeleteSliderComponent extends Component
     public $sub_title;
     public $offer;
     public $link;
-    public $status;
+    public $category_text;
     public $image;
     public $slider_id;
 
@@ -24,7 +24,7 @@ class AdminDeleteSliderComponent extends Component
         $this->sub_title = $slide->sub_title;
         $this->offer = $slide->offer;
         $this->link = $slide->link;
-        $this->status = $slide->status;
+        $this->category_text = $slide->category_text;
         $this->image = $slide->image;
         $this->slider_id = $slider_id;
     }
