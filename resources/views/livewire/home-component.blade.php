@@ -125,6 +125,7 @@
                                 @endforeach
                             </ul>
                         </div>
+<<<<<<< HEAD
                         <!-- Product sidebar Widget -->
                         <div class="sidebar-widget product-sidebar  mb-30 p-30 bg-grey border-radius-10">
                             <div class="widget-header position-relative mb-20 pb-10">
@@ -133,11 +134,26 @@
                             </div>
                             @foreach ($nproducts as $nproduct)
                             <div class="single-post clearfix">
+=======
+                        <!-- Fillter By Price -->
+                        <!-- Product sidebar Widget -->
+                        <div class="sidebar-widget product-sidebar mb-30 p-30 bg-grey border-radius-10">
+                            <div class="pb-10 mb-20 widget-header position-relative">
+                                <h5 class="mb-10 widget-title">New products</h5>
+                                <div class="bt-1 border-color-1"></div>
+                            </div>
+                            @foreach ($newproducts as $nproduct)
+                            <div class="clearfix single-post">
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
                                 <div class="image">
                                     <img src="{{ asset('storage/assets/imgs/shop/products/' . $nproduct->image) }}"
                                         alt="{{ $product->name }}">
                                 </div>
+<<<<<<< HEAD
                                 <div class="content pt-10">
+=======
+                                <div class="pt-10 content">
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
                                     <h6><a href="{{ route('product.details', ['slug' => $product->slug]) }}">{{
                                             $nproduct->name }}</a></h6>
                                     <div class="product-price">
@@ -156,12 +172,20 @@
         </section>
         <section class="section-padding">
             <div class="container wow fadeIn animated">
+<<<<<<< HEAD
                 <h3 class="section-title mb-20"><span>New</span> Arrivals</h3>
+=======
+                <h3 class="mb-20 section-title"><span>New</span> Arrivals</h3>
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
                 <div class="carausel-6-columns-cover position-relative">
                     <div class="slider-arrow slider-arrow-2 carausel-6-columns-arrow" id="carausel-6-columns-2-arrows">
                     </div>
                     <div class="carausel-6-columns carausel-arrow-center" id="carausel-6-columns-2">
+<<<<<<< HEAD
                         @foreach ($nproducts as $nproduct)
+=======
+                        @foreach ($newproducts as $nproduct)
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
                         <div class="product-cart-wrap small hover-up">
                             <div class="product-img-action-wrap">
                                 <div class="product-img product-img-zoom">

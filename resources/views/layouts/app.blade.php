@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/imgs/logo/os.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
-    @livewireStyles
+    {{-- @livewireStyles --}}
 </head>
 
 <body>
@@ -106,18 +106,33 @@
                                         @if (Auth::user()->utype == 'ADM')
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('admin.dashboard') }}">Admin Dashboard</a></li>
+<<<<<<< HEAD
 
+=======
+                                            <li><a href="#">New Admin</a>
+                                            </li>
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
                                             <li><a href="{{ route('admin.products') }}">All Products</a></li>
                                             <li><a href="{{ route('admin.home.slider') }}">All Sliders</a></li>
                                             <li><a href="{{ route('admin.catagories') }}">All Categories</a></li>
                                             <li><a href="{{ route('admin.coupons') }}">All Coupons</a></li>
                                             <li><a href="{{ route('admin.orders') }}">All Orders</a></li>
                                             <li><a href="{{ route('admin.customersview') }}">All Customers</a></li>
+<<<<<<< HEAD
 
                                         </ul>
                                         @else
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('shop.my-account') }}">User Dashboard</a></li>
+=======
+                                        </ul>
+                                        @else
+                                        <ul class="sub-menu">
+                                            <li><a href="{{ route('shop.my-account') }}">Sample</a></li>
+                                            <li><a href="{{ route('user.orders') }}">User Order</a></li>
+                                            <li><a href="{{ route('user.dashboard') }}">User Dashboard</a></li>
+                                            {{-- <li><a href="{{ route('user.address') }}">User Address</a></li> --}}
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
                                         </ul>
                                         @endif
                                         @endif
@@ -200,6 +215,17 @@
                         <a href="#">(+95) 9986-665-101 </a>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+                <div class="mobile-social-icon">
+                    <h5 class="mb-15 text-grey-4">Follow Us</h5>
+                    <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-facebook.svg') }}" alt=""></a>
+                    <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-twitter.svg') }}" alt=""></a>
+                    <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-instagram.svg')}}" alt=""></a>
+                    <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-pinterest.svg')}}" alt=""></a>
+                    <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-youtube.svg') }}" alt=""></a>
+                </div>
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
             </div>
         </div>
     </div>
@@ -224,6 +250,22 @@
                             <p class="wow fadeIn animated">
                                 <strong>Email: </strong>minkyawt733@gmail.com
                             </p>
+<<<<<<< HEAD
+=======
+                            <h5 class="mb-10 mt-30 fw-600 text-grey-4 wow fadeIn animated">Follow Us</h5>
+                            <div class="mobile-social-icon wow fadeIn animated mb-sm-5 mb-md-0">
+                                <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-facebook.svg') }}"
+                                        alt=""></a>
+                                <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-twitter.svg') }}"
+                                        alt=""></a>
+                                <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-instagram.svg') }}"
+                                        alt=""></a>
+                                <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-pinterest.svg') }}"
+                                        alt=""></a>
+                                <a href="#"><img src="{{ asset('assets/imgs/theme/icons/icon-youtube.svg') }}"
+                                        alt=""></a>
+                            </div>
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-3">
@@ -242,8 +284,12 @@
                             <li><a href="{{ route('shop.cart') }}">View Cart</a></li>
                             <li><a href="{{ route('shop.wishlist') }}">My Wishlist</a></li>
                             <li><a href="#">Track My Order</a></li>
+<<<<<<< HEAD
                             <li><a href="#">Order</a></li>
                             {{-- <li><a href="{{ route('user.orders') }}">Order</a></li> --}}
+=======
+                            <li><a href="{{ route('user.orders') }}">Order</a></li>
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
                         </ul>
                     </div>
                     <div class="col-lg-4 mob-center">

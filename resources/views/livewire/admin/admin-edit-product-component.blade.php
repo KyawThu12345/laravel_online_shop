@@ -63,6 +63,24 @@
                             </div>
                         </div>
                         <div class="form-group">
+<<<<<<< HEAD
+=======
+                            <label class="col-md-12 control-label">SKU</label>
+                            <div class="col-md-12">
+                                <input type="text" placeholder="SKU" class="form-control input-md" wire:model="SKU" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 control-label">Featured</label>
+                            <div class="col-md-12">
+                                <select class="form-control" wire:model="featured">
+                                    <option value="0">No</option>
+                                    <option value="1">Yes</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
                             <label class="col-md-12 control-label">Quantity</label>
                             <div class="col-md-12">
                                 <input type="text" placeholder="Quantity" class="form-control input-md"

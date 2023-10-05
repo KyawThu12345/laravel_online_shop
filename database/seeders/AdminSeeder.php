@@ -16,7 +16,11 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
+<<<<<<< HEAD
             'name' => 'MinKyawThu',
+=======
+            'name' => 'minkyawthu',
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
             'email' => 'minkyawthu@gmail.com',
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',

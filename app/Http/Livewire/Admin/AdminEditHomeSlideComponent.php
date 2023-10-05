@@ -16,7 +16,10 @@ class AdminEditHomeSlideComponent extends Component
     public $offer;
     public $link;
     public $category_text;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
     public $image;
     public $slider_id;
     public $newImage;
@@ -50,11 +53,15 @@ class AdminEditHomeSlideComponent extends Component
         $slide->title = $this->title;
         $slide->sub_title = $this->sub_title;
         $slide->offer = $this->offer;
+<<<<<<< HEAD
 
         $slide->link = $this->link;
 
 
 
+=======
+        $slide->link =  $this->link;
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
         $slide->category_text = $this->category_text;
         if ($this->newImage) {
             unlink('assets/imgs/slider/' . $slide->image);

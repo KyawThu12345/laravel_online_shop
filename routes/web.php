@@ -18,6 +18,10 @@ use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use App\Http\Livewire\Admin\AdminDeleteCategoryComponent;
 use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminHomeSliderComponent;
+<<<<<<< HEAD
+=======
+// use App\Http\Livewire\Admin\AdminNewComponent;
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
 use App\Http\Livewire\Admin\AdminOrderComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
@@ -52,23 +56,42 @@ use App\Http\Livewire\WishlistComponent;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', HomeComponent::class)->name('home.index');
+Route::get('/shop', ShopComponent::class)->name('shop');
+Route::get('/about', AboutComponent::class)->name('about');
+Route::get('/contact', ContactComponent::class)->name('contact');
+Route::get('/cart', CartComponent::class)->name('shop.cart');
+Route::get('/myaccount', MyAccountComponent::class)->name('shop.my-account');
+Route::get('/accountLogout', Logout::class)->name('shop.logout');
+Route::get('/checkout', CheckoutComponent::class)->name('shop.checkout');
+Route::get('/privacy-policy', PrivacyPolicyComponent::class)->name('shop.privacy-policy');
+Route::get('/terms-conditions', TermsConditionsComponent::class)->name('shop.terms-conditions');
+Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
+Route::get('/product-category/{slug}', CategoryComponent::class)->name('product.category');
+Route::get('/search', SearchComponent::class)->name('product.search');
+Route::get('/wishlist', WishlistComponent::class)->name('shop.wishlist');
+Route::get('/deliveryinformation', DeliveryInformationComponent::class)->name('shop.deliveryinformation');
+Route::get('/deliveryinformation', DeliveryInformationComponent::class)->name('shop.deliveryinformation');
+Route::get('/thank-you', ThankyouComponent::class)->name('thankyou');
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
+Route::post('/contact_mail', [ContactComponent::class, 'contact_mail_send'])->name('contact_mail');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
+    Route::get('/user/orders', UserOrdersComponent::class)->name('user.orders');
+    Route::get('/user/orders/{order_id}', UserOrderDetailsComponent::class)->name('user.orderdetails');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+<<<<<<< HEAD
 Route::middleware('auth')->group(function () {
     Route::get('/user/orders', UserOrdersComponent::class)->name('user.orders');
     Route::get('/user/orders/{order_id}', UserOrderDetailsComponent::class)->name('user.orderdetails');
 });
+=======
+
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
 Route::middleware('auth', 'authadmin')->group(function () {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/categories', AdminCategoriesComponent::class)->name('admin.catagories');
@@ -86,6 +109,7 @@ Route::middleware('auth', 'authadmin')->group(function () {
     Route::get('/admin/coupon/add', AdminAddCouponComponent::class)->name('admin.addcoupon');
     Route::get('/admin/coupon/edit/{coupon_id}', AdminEditCouponComponent::class)->name('admin.editcoupon');
     Route::get('/admin/orders', AdminOrderComponent::class)->name('admin.orders');
+<<<<<<< HEAD
     Route::get('/admin/orders/{order_id}', AdminOrderDetailsComponent::class)->name('admin.orderdetails');
     Route::get('/admin/customersview', AdminCustomersViewComponent::class)->name('admin.customersview');
 });
@@ -108,6 +132,10 @@ Route::get('/thank-you', ThankyouComponent::class)->name('thankyou');
 
 Route::get('payment', [PaymentController::class, 'index'])->name('payment');
 Route::post('/contact_mail', [ContactComponent::class, 'contact_mail_send'])->name('contact_mail');
+=======
+    // Route::get('/admin/orders/{order_id}', AdminOrderDetailsComponent::class)->name('admin.orderdetails');
+    Route::get('/admin/customersview', AdminCustomersViewComponent::class)->name('admin.customersview');
+});
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
 
 require __DIR__ . '/auth.php';
-// Route::auth();

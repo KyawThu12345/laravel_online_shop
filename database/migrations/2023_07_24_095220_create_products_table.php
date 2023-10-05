@@ -18,7 +18,11 @@ return new class extends Migration {
             $table->text('description')->nullable();
             $table->decimal('regular_price', 8, 2);
             $table->decimal('sale_price', 8, 2)->nullable();
+<<<<<<< HEAD
             $table->integer('rate');
+=======
+            $table->string('SKU');
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
             $table->boolean('featured')->default(false);
             $table->unsignedInteger('quantity')->default(10);
             $table->string('image');

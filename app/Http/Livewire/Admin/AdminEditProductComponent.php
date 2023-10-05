@@ -14,7 +14,11 @@ class AdminEditProductComponent extends Component
 {
     use WithFileUploads;
     public $product;
+<<<<<<< HEAD
     public $name, $slug, $short_description, $description, $regular_price, $image, $sale_price,$quantity, $category_id, $newimage, $product_id;
+=======
+    public $name, $slug, $short_description, $description, $regular_price, $image, $sale_price, $SKU, $featured, $quantity, $category_id, $newimage, $product_id;
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
     public function mount($product_slug)
     {
         $product = Product::where('slug', $product_slug)->first();
@@ -24,6 +28,11 @@ class AdminEditProductComponent extends Component
         $this->description = $product->description;
         $this->regular_price = $product->regular_price;
         $this->sale_price = $product->sale_price;
+<<<<<<< HEAD
+=======
+        $this->SKU = $product->SKU;
+        $this->featured = $product->featured;
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
         $this->quantity = $product->quantity;
         $this->image = $product->image;
         $this->category_id = $product->category_id;
@@ -49,6 +58,11 @@ class AdminEditProductComponent extends Component
             $product->description = $this->description;
             $product->regular_price = $this->regular_price;
             $product->sale_price = $this->sale_price;
+<<<<<<< HEAD
+=======
+            $product->SKU = $this->SKU;
+            $product->featured = $this->featured;
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
             $product->quantity = $this->quantity;
         } else {
             Log::error('Product not found');

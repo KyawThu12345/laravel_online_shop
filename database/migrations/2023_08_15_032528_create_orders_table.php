@@ -16,7 +16,10 @@ return new class extends Migration {
             $table->decimal('subtotal')->default(0);
             $table->decimal('discount')->default(0);
             $table->decimal('tax')->default(0);
+<<<<<<< HEAD
             $table->decimal('subtotal_after_discount', 10, 2)->default(0.00);
+=======
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
             $table->decimal('total', 10, 2)->default(0.00);
             $table->string('firstname');
             $table->string('lastname');

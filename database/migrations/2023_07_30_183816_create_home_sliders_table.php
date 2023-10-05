@@ -19,6 +19,10 @@ return new class extends Migration {
             $table->string('link');
             $table->string('category_text');
             $table->string('image');
+<<<<<<< HEAD
+=======
+            $table->string('category_text');
+>>>>>>> 3d5486bdc804e03d6b411aa5f3fcd2c038a37f7e
             $table->timestamps();
         });
     }
